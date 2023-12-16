@@ -95,6 +95,8 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
+import 'package:project_mobile_flutter/pages/profil/index.dart';
+import 'package:project_mobile_flutter/pages/tes.dart';
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
 
