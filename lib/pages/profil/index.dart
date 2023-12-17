@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:project_mobile_flutter/pages/Login/index.dart';
+import 'package:project_mobile_flutter/pages/profil/editprofile.dart';
+import 'package:project_mobile_flutter/pages/profil/editresep.dart';
 import 'package:project_mobile_flutter/pages/profil/widget_userprofile.dart';
 import 'package:page_transition/page_transition.dart';
 // import 'package:project_mobile_flutter/pages/profil/widget_userprofile.dart';
@@ -13,7 +15,7 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('profile', style: Theme.of(context).textTheme.headline6),
+        title: Text('Profile', style: Theme.of(context).textTheme.headline6),
         backgroundColor: Colors.amber,
       ),
       body: SingleChildScrollView(
@@ -41,7 +43,12 @@ class Profile extends StatelessWidget {
               SizedBox(
                 width: 200,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.fade, child: Update()));
+                  },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.yellow,
                       side: BorderSide.none,
@@ -57,7 +64,15 @@ class Profile extends StatelessWidget {
               ///menu
               ProfileMenuWidget(title: 'Informasi Akun', onPress: () {}),
               ProfileMenuWidget(title: 'Tambah Resep', onPress: () {}),
-              ProfileMenuWidget(title: 'Edit Resep', onPress: () {}),
+              ProfileMenuWidget(
+                  title: 'Edit Resep',
+                  onPress: () {
+                    Navigator.push(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.fade,
+                            child: Updatebahan()));
+                  }),
               const Divider(
                 color: Colors.grey,
               ),
