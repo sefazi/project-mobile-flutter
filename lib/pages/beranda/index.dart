@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
                             flex: 3,
                             child: FadeInUp(
                                 duration: Duration(milliseconds: 1300),
-                                child: Image.asset('assets/c.png')),
+                                child: Image.asset('assgets/c.png')),
                           ),
                         ],
                       )
