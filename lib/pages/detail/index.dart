@@ -1,6 +1,7 @@
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+// import 'package:project_mobile_flutter/pages/detail/widget_coment_input.dart';
 
 class Detail extends StatelessWidget {
   @override
@@ -142,200 +143,6 @@ class Detail extends StatelessWidget {
                           SizedBox(
                             height: 50,
                           ),
-                          ListBody(
-                            children: [
-                              Expanded(
-                                child: CommentList(),
-                              ),
-                              CommentInput(),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Container(
-                            height: 80,
-                            child: ListView(
-                              scrollDirection: Axis.horizontal,
-                              children: <Widget>[
-                                FadeInUp(
-                                    duration: Duration(milliseconds: 1300),
-                                    child: AspectRatio(
-                                      aspectRatio: 3.2 / 1,
-                                      child: Container(
-                                        padding: EdgeInsets.all(13),
-                                        decoration: BoxDecoration(
-                                            border: Border.all(
-                                                color: Colors.grey.shade300),
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(15))),
-                                        child: Row(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          children: <Widget>[
-                                            Container(
-                                              width: 56,
-                                              padding: EdgeInsets.all(10),
-                                              decoration: BoxDecoration(
-                                                  borderRadius:
-                                                      BorderRadius.all(
-                                                          Radius.circular(10)),
-                                                  color: Color.fromRGBO(
-                                                      251, 53, 105, 1)),
-                                              child: Image.asset(
-                                                  'assets/socks-icon.png'),
-                                            ),
-                                            SizedBox(
-                                              width: 10,
-                                            ),
-                                            Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: <Widget>[
-                                                Text(
-                                                  'Ankle Length Socks',
-                                                  style: TextStyle(
-                                                      color: Color.fromRGBO(
-                                                          97, 90, 90, 1),
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                ),
-                                                SizedBox(
-                                                  height: 2,
-                                                ),
-                                                Text(
-                                                  '23,345',
-                                                  style: TextStyle(
-                                                      color: Color.fromRGBO(
-                                                          97, 90, 90, .7),
-                                                      fontSize: 13),
-                                                )
-                                              ],
-                                            )
-                                          ],
-                                        ),
-                                      ),
-                                    )),
-                                FadeInUp(
-                                    duration: Duration(milliseconds: 1400),
-                                    child: AspectRatio(
-                                      aspectRatio: 3.2 / 1,
-                                      child: Container(
-                                        margin: EdgeInsets.only(left: 20),
-                                        padding: EdgeInsets.all(13),
-                                        decoration: BoxDecoration(
-                                            border: Border.all(
-                                                color: Colors.grey.shade300),
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(15))),
-                                        child: Row(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          children: <Widget>[
-                                            Container(
-                                              width: 56,
-                                              padding: EdgeInsets.all(10),
-                                              decoration: BoxDecoration(
-                                                  borderRadius:
-                                                      BorderRadius.all(
-                                                          Radius.circular(10)),
-                                                  color: Color.fromRGBO(
-                                                      81, 234, 234, 1)),
-                                              child: Image.asset(
-                                                  'assets/socks-icon-left.png'),
-                                            ),
-                                            SizedBox(
-                                              width: 10,
-                                            ),
-                                            Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: <Widget>[
-                                                Text(
-                                                  'Quarter Length Socks',
-                                                  style: TextStyle(
-                                                      color: Color.fromRGBO(
-                                                          97, 90, 90, 1),
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                ),
-                                                SizedBox(
-                                                  height: 2,
-                                                ),
-                                                Text(
-                                                  '23,345',
-                                                  style: TextStyle(
-                                                      color: Color.fromRGBO(
-                                                          97, 90, 90, .7),
-                                                      fontSize: 13),
-                                                )
-                                              ],
-                                            )
-                                          ],
-                                        ),
-                                      ),
-                                    )),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            height: 50,
-                          ),
-                          FadeInUp(
-                              duration: Duration(milliseconds: 1500),
-                              child: Container(
-                                height: 60,
-                                padding: EdgeInsets.symmetric(horizontal: 40),
-                                decoration: BoxDecoration(
-                                    boxShadow: [
-                                      BoxShadow(
-                                          color: Colors.grey.shade300,
-                                          blurRadius: 10,
-                                          offset: Offset(0, 10))
-                                    ],
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(50)),
-                                    gradient: LinearGradient(colors: [
-                                      Color.fromRGBO(251, 121, 155, 1),
-                                      Color.fromRGBO(251, 53, 105, 1)
-                                    ])),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: <Widget>[
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.baseline,
-                                      textBaseline: TextBaseline.alphabetic,
-                                      children: <Widget>[
-                                        Text(
-                                          '\$14.',
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 22,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Text('54',
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                            )),
-                                      ],
-                                    ),
-                                    Text(
-                                      'Pay',
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 25),
-                                    ),
-                                  ],
-                                ),
-                              )),
-                          SizedBox(
-                            height: 50,
-                          ),
                         ],
                       ))))),
         ],
@@ -344,66 +151,66 @@ class Detail extends StatelessWidget {
   }
 }
 
-class CommentList extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: comments.length,
-      itemBuilder: (context, index) {
-        return ListTile(
-          title: Text(comments[index]),
-        );
-      },
-    );
-  }
-}
+// class CommentList extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return ListView.builder(
+//       itemCount: comments.length,
+//       itemBuilder: (context, index) {
+//         return ListTile(
+//           title: Text(comments[index]),
+//         );
+//       },
+//     );
+//   }
+// }
 
-class CommentInput extends StatefulWidget {
-  @override
-  _CommentInputState createState() => _CommentInputState();
-}
+// class CommentInput extends StatefulWidget {
+//   @override
+//   _CommentInputState createState() => _CommentInputState();
+// }
 
-class _CommentInputState extends State<CommentInput> {
-  TextEditingController _commentController = TextEditingController();
+// class _CommentInputState extends State<CommentInput> {
+//   TextEditingController _commentController = TextEditingController();
 
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Row(
-        children: [
-          Expanded(
-            child: TextField(
-              controller: _commentController,
-              decoration: InputDecoration(
-                hintText: 'Tambahkan Komentar...',
-              ),
-            ),
-          ),
-          IconButton(
-            icon: Icon(Icons.send),
-            onPressed: () {
-              String comment = _commentController.text;
-              if (comment.isNotEmpty) {
-                addComment(comment);
-                _commentController.clear();
-              }
-            },
-          ),
-        ],
-      ),
-    );
-  }
+//   @override
+//   Widget build(BuildContext context) {
+//     return Padding(
+//       padding: const EdgeInsets.all(8.0),
+//       child: Row(
+//         children: [
+//           Expanded(
+//             child: TextField(
+//               controller: _commentController,
+//               decoration: InputDecoration(
+//                 hintText: 'Tambahkan Komentar...',
+//               ),
+//             ),
+//           ),
+//           IconButton(
+//             icon: Icon(Icons.send),
+//             onPressed: () {
+//               String comment = _commentController.text;
+//               if (comment.isNotEmpty) {
+//                 addComment(comment);
+//                 _commentController.clear();
+//               }
+//             },
+//           ),
+//         ],
+//       ),
+//     );
+//   }
 
-  void addComment(String comment) {
-    // Simpan logika untuk menyimpan komentar ke data atau server
-    setState(() {
-      comments.add(comment);
-    });
-  }
-}
+//   void addComment(String comment) {
+//     // Simpan logika untuk menyimpan komentar ke data atau server
+//     setState(() {
+//       comments.add(comment);
+//     });
+//   }
+// }
 
-List<String> comments = [
-  'Ini adalah komentar pertama.',
-  'Komentar kedua terlihat bagus!',
-];
+// List<String> comments = [
+//   'Ini adalah komentar pertama.',
+//   'Komentar kedua terlihat bagus!',
+// ];
