@@ -18,9 +18,11 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text(
-        'Login',
-      )),
+        title: const Text(
+          'Login',
+        ),
+        backgroundColor: Colors.amber,
+      ),
       body: SingleChildScrollView(
         child: SafeArea(
             child: Container(
