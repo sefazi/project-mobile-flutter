@@ -145,25 +145,21 @@ class HomePage extends StatelessWidget {
             Container(
               height: 280,
               width: double.infinity,
-              child: ListView(
+              child: ListView.builder(
                 padding: EdgeInsets.only(bottom: 20, left: 20),
                 scrollDirection: Axis.horizontal,
-                children: <Widget>[
-                  FadeInUp(
-                      duration: Duration(milliseconds: 1300),
-                      child: makeCard(
-                          context: context,
-                          startColor: Color.fromRGBO(160, 117, 54, 1),
-                          endColor: Color.fromRGBO(157, 78, 14, 1),
-                          image: 'assets/e.png')),
-                  FadeInUp(
-                      duration: Duration(milliseconds: 1400),
-                      child: makeCard(
-                          context: context,
-                          startColor: Color.fromRGBO(203, 251, 255, 1),
-                          endColor: Color.fromRGBO(81, 223, 234, 1),
-                          image: 'assets/ef.png')),
-                ],
+                itemCount: 10,
+                itemBuilder: (BuildContext context, int index) {
+                  return FadeInUp(
+                    duration: Duration(milliseconds: 1300),
+                    child: makeCard(
+                        context: context,
+                        startColor: Color.fromRGBO(160, 117, 54, 1),
+                        endColor: Color.fromRGBO(157, 78, 14, 1),
+                        image: 'assets/e.png'),
+                  );
+                },
+                // children: <Widget>[/** I want FadeUp widget in here are looped */],
               ),
             )
           ],
