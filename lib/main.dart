@@ -9,7 +9,7 @@ import 'package:project_mobile_flutter/pages/profil/index.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: HomePage(),
+    home: Profile(),
   ));
 }
 
