@@ -11,7 +11,7 @@ import 'package:project_mobile_flutter/pages/edit_resep/index.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: HomePage(),
+    home: Profile(),
   ));
 }
 
