@@ -1,6 +1,9 @@
 // import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:project_mobile_flutter/pages/Login/index.dart';
+import 'package:project_mobile_flutter/pages/profil/widget_userprofile.dart';
+import 'package:page_transition/page_transition.dart';
 // import 'package:project_mobile_flutter/pages/profil/widget_userprofile.dart';
 
 class Profile extends StatelessWidget {
@@ -49,6 +52,26 @@ class Profile extends StatelessWidget {
               ),
               const SizedBox(height: 30),
               const Divider(),
+              const SizedBox(height: 10),
+
+              ///menu
+              ProfileMenuWidget(title: 'Informasi Akun', onPress: () {}),
+              ProfileMenuWidget(title: 'Tambah Resep', onPress: () {}),
+              ProfileMenuWidget(title: 'Edit Resep', onPress: () {}),
+              const Divider(
+                color: Colors.grey,
+              ),
+              const SizedBox(height: 10),
+              ProfileMenuWidget(
+                  title: 'Logout',
+                  textColor: Colors.red,
+                  endICon: false,
+                  onPress: () {
+                    Navigator.push(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.fade, child: Login()));
+                  })
             ],
           ),
         ),

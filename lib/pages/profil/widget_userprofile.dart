@@ -1,65 +1,34 @@
-// import 'package:flutter/material.dart';
-// import 'package:project_mobile_flutter/pages/profil/index.dart';
+import 'package:flutter/material.dart';
 
-// class UserProfile extends StatelessWidget {
-//   final User user;
+class ProfileMenuWidget extends StatelessWidget {
+  const ProfileMenuWidget(
+      {Key? key,
+      required this.title,
+      required this.onPress,
+      this.textColor,
+      this.endICon = true})
+      : super(key: key);
 
-//   UserProfile({required this.user});
+  final String title;
+  final VoidCallback onPress;
+  final Color? textColor;
+  final bool endICon;
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Padding(
-//       padding: const EdgeInsets.all(10.0),
-//       child: Row(
-//         children: [
-//           // Container(
-//           //   decoration: BoxDecoration(
-//           //     shape: BoxShape.circle,
-//           //     color: Colors.blue, // Warna latar belakang foto profil
-//           //   ),
-//           //   child: CircleAvatar(
-//           //     radius: 50.0,
-//           //     backgroundImage: AssetImage('assets/profile_picture.jpg'),
-//           //   ),
-//           // ),
-//           SizedBox(width: 16.0),
-//           Column(
-//             crossAxisAlignment: CrossAxisAlignment.start,
-//             children: [
-//               Text(
-//                 user.name,
-//                 style: TextStyle(
-//                   fontSize: 24.0,
-//                   fontWeight: FontWeight.bold,
-//                 ),
-//               ),
-//               SizedBox(height: 2.0),
-//               Text(
-//                 user.email,
-//                 style: TextStyle(
-//                   fontSize: 14.0,
-//                   color: Colors.grey,
-//                 ),
-//               ),
-//               SizedBox(height: 4.0),
-//               Text(
-//                 'Resep:',
-//                 style: TextStyle(
-//                   fontSize: 18.0,
-//                   fontWeight: FontWeight.bold,
-//                 ),
-//               ),
-//               SizedBox(height: 4.0),
-//               Text(
-//                 user.bio,
-//                 style: TextStyle(
-//                   fontSize: 16.0,
-//                 ),
-//               ),
-//             ],
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      onTap: onPress,
+      leading: Container(
+        width: 30,
+        height: 30,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(100),
+          color: const Color.fromARGB(255, 105, 104, 102).withOpacity(0.1),
+        ),
+      ),
+      title: Text(title,
+          style:
+              Theme.of(context).textTheme.bodyText1?.apply(color: textColor)),
+    );
+  }
+}
