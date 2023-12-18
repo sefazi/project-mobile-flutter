@@ -60,7 +60,7 @@ class Update extends StatelessWidget {
                           backgroundColor: Colors.red,
                           side: BorderSide.none,
                           shape: const StadiumBorder()),
-                      child: const Text('Delete',
+                      child: const Text('Hapus',
                           style: TextStyle(color: Colors.white)),
                     ),
                   ),

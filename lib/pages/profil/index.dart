@@ -78,7 +78,7 @@ class Profile extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               ProfileMenuWidget(
-                  title: 'Logout',
+                  title: 'Keluar',
                   textColor: Colors.red,
                   endICon: false,
                   onPress: () {
