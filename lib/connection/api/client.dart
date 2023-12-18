@@ -5,7 +5,7 @@ class Api {
   final Dio dio = Dio(BaseOptions(
     baseUrl: getConfig().url,
     connectTimeout: Duration(milliseconds: getConfig().connectTimeout),
-    receiveTimeout: const Duration(milliseconds: 3000),
+    receiveTimeout: Duration(milliseconds: getConfig().receiveTimeout),
   ));
 
   //Ambil Semua Data

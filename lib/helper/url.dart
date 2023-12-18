@@ -1,6 +1,7 @@
 Map<String, dynamic> config = {
   'url': 'http://localhost:8080/',
   'connectTimeout': 5000,
+  'receiveTimeout': 3000,
   'item': {
     'path': '',
     'endpoint': 'getAllItem',
@@ -10,9 +11,10 @@ Map<String, dynamic> config = {
 class Config {
   final String url;
   final int connectTimeout;
+  final int receiveTimeout;
   final Client item;
 
-  Config(this.url, this.connectTimeout, this.item);
+  Config(this.url, this.connectTimeout, this.item, this.receiveTimeout);
 }
 
 class Client {
@@ -25,6 +27,6 @@ class Client {
 }
 
 Config getConfig() {
-  return Config(
-      config['url'], config['connectTimeout'], Client(config['item'] ?? {}));
+  return Config(config['url'], config['connectTimeout'],
+      Client(config['item'] ?? {}), config['receiveTimeout']);
 }
