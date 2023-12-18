@@ -86,7 +86,8 @@ class _LoginState extends State<Login> {
                                               },
                                               child: const Text("Ok"),
                                               style: ElevatedButton.styleFrom(
-                                                  primary: Colors.green),
+                                                  // primary: Colors.green
+                                                  ),
                                             )
                                           ],
                                         );
