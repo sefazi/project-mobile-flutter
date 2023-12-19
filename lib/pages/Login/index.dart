@@ -29,7 +29,7 @@ class _LoginState extends State<Login> {
           height: MediaQuery.of(context).size.height,
           child: Column(
             children: [
-              Text("Login Admin",
+              Text("Login Aja",
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500)),
               Center(
                 child: Form(
