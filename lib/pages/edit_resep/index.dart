@@ -143,21 +143,21 @@ class EditResep extends StatelessWidget {
                           SizedBox(
                             height: 20,
                           ),
-
-                        Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Expanded(child: Container()),
-                          TextButton(
-                            onPressed: () {},
-                            child: Text('Edit'),
-                            style: TextButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 13, 116, 90),
-                              primary: Colors.white,
-                            ),
-                          ),
-                        ],
-                      )
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Expanded(child: Container()),
+                              TextButton(
+                                onPressed: () {},
+                                child: Text('Edit'),
+                                style: TextButton.styleFrom(
+                                  backgroundColor:
+                                      Color.fromARGB(255, 13, 116, 90),
+                                  // primary: Colors.white,
+                                ),
+                              ),
+                            ],
+                          )
                         ],
                       ))))),
         ],
